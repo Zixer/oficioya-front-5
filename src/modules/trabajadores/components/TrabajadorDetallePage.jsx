@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useAuth } from '../../auth/hooks/useAuth';
 import { obtenerTrabajador } from '../services/trabajadoresService';
 import MensajeError from '../../core/components/MensajeError';
+import NuevaSolicitudForm from '../../solicitudes/components/NuevaSolicitudForm';
  
 function TrabajadorDetallePage() {
   const { id } = useParams();
@@ -37,7 +38,7 @@ function TrabajadorDetallePage() {
 <h2>{trabajador.nombre}</h2>
 <p>Oficio: {trabajador.oficioPrincipal ?? 'Sin definir'}</p>
 <p>Zona: {trabajador.zona ?? 'Sin definir'}</p>
-      {usuario.rol === 'CONTRATANTE' && <p>formulario</p>}
+      {usuario.rol === 'CONTRATANTE' && <NuevaSolicitudForm trabajadorId={trabajador.id} />}
 </section>
   );
 }
