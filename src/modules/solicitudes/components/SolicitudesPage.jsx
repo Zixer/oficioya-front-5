@@ -1,9 +1,11 @@
+import { useAuth } from '../../auth/hooks/useAuth';
 import { useSolicitudes } from '../hooks/useSolicitudes';
 import SolicitudItem from './SolicitudItem';
 import MensajeError from '../../core/components/MensajeError';
  
 function SolicitudesPage() {
-  const { solicitudes, cargando, error } = useSolicitudes();
+  const { solicitudes, cargando, error, ejecutarAccion } = useSolicitudes();
+  const { usuario } = useAuth();
  
   if (cargando) {
     return <p>Cargando solicitudes...</p>;
@@ -17,7 +19,11 @@ function SolicitudesPage() {
 <ul style={{ listStyle: 'none', padding: 0 }}>
         {solicitudes.map((s) => (
 <li key={s.id}>
-<SolicitudItem solicitud={s} />
+<SolicitudItem 
+solicitud={s}
+rol = {usuario?.rol}
+onAccion = {ejecutarAccion} 
+/>
 </li>
         ))}
 </ul>
