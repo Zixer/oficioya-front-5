@@ -43,8 +43,6 @@ Una vez iniciado el servidor, abrir el navegador e ingresar a la siguiente direc
 
 [http://localhost:5173](http://localhost:5173)
 
----
-
 ## Arquitectura del Front
 
 El código fuente está estructurado por módulos de negocio dentro de `src/modules/`, separando los componentes visuales, la lógica de estado (hooks) y el consumo de servicios HTTP.
@@ -95,9 +93,7 @@ Administra la vista de exploración de trabajadores y la página de detalle o pe
 
 Controla la creación de solicitudes por parte de los contratantes, la visualización de solicitudes y las acciones de cambio de estado (aceptar, rechazar y cancelar), según el rol del usuario autenticado.
 
----
-
-## Preguntas Conceptuales del Laboratorio
+## Preguntas Conceptuales
 
 ### 1. ¿Qué diferencia hay entre una prop y un estado (`useState`)?
 
@@ -143,44 +139,42 @@ Tener el frontend y el backend en repositorios independientes ofrece varias vent
 
 - **Autonomía de los equipos:** Facilita que diferentes integrantes o equipos se especialicen en frontend o backend y trabajen en paralelo mediante un contrato de API previamente acordado, reduciendo los conflictos de integración (*merge conflicts*) en un único repositorio.
 
----
-
 ## Evidencias del Recorrido Completo (Sección 8)
 
 Las siguientes capturas demuestran el correcto funcionamiento del flujo completo de la aplicación. Las evidencias se encuentran almacenadas en la carpeta `docs/evidencias/`.
 
 ### 1. Intento de acceso sin sesión (Redirección al Login)
 
-[Redirección al Login]
+![Redirección al Login](docs/evidencias/01-redireccion-login.png)
 
 ### 2. Error en Login por credenciales erróneas
 
-[Error en Login]
+![Error en Login](docs/evidencias/02-login-error.png)
 
 ### 3. Login exitoso como Contratante (Carla)
 
-[Login como Contratante]
+![Login como Contratante](docs/evidencias/03-lista-trabajadores.png)
 
 ### 4. Creación de una nueva solicitud a Pedro
 
-[Creación de solicitud]
+![Creación de solicitud](docs/evidencias/04-crear-solicitud.png)
 
 ### 5. Solicitud creada en "Mis solicitudes" (Vista Contratante)
 
-[Solicitud pendiente]
+![Solicitud pendiente](docs/evidencias/05-solicitud-contratante.png)
 
 ### 6. Vista como Trabajador (Pedro) y Aceptación
 
-[Aceptación de solicitud]
+![Aceptación de solicitud](docs/evidencias/06-aceptar-trabajador.png)
 
 ### 7. Cancelación de la solicitud por parte del Contratante
 
-[Cancelación de solicitud]
+![Cancelación de solicitud](docs/evidencias/07-cancelar-solicitud.png)
 
 ### 8. Comprobación de token volátil en memoria (F5)
 
-[Token en memoria]
+![Token en memoria](docs/evidencias/08-recarga-memoria.png)
 
 ### 9. Inspección del encabezado Authorization
 
-[Encabezado Authorization]
+![Encabezado Authorization](docs/evidencias/09-header-authorization.png)
