@@ -8,7 +8,7 @@ Aplicación React + Vite que consume la API del laboratorio de seguridad.
 
 1. **Node.js:** Versión 20.19+ o 22.12+.
 2. **Backend en ejecución:** La API de Spring Boot debe estar corriendo en `http://localhost:8080`.
-   - Repositorio del Backend: [https://github.com/Zixer/DOSW_Lab8_Buitrago_Ibanez_Murillo_Sanchez_Vega.git]
+      - Repositorio del Backend: [DOSW_Lab8_Buitrago_Ibanez_Murillo_Sanchez_Vega](https://github.com/Zixer/DOSW_Lab8_Buitrago_Ibanez_Murillo_Sanchez_Vega)
 
 ### Pasos para ejecutar la aplicación
 
@@ -51,7 +51,6 @@ El código fuente está estructurado por módulos de negocio dentro de `src/modu
 
 ```text
 src/
-├── assets/
 ├── modules/
 │   ├── core/
 │   │   ├── components/        # Componentes comunes: Navbar, RutaProtegida, MensajeError
